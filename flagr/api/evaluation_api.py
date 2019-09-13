@@ -37,18 +37,18 @@ class EvaluationApi(object):
         """post_evaluation  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.post_evaluation(body, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.post_evaluation(body, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param EvalContext body: evalution context (required)
         :return: EvalResult
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.post_evaluation_with_http_info(body, **kwargs)  # noqa: E501
         else:
             (data) = self.post_evaluation_with_http_info(body, **kwargs)  # noqa: E501
@@ -58,11 +58,11 @@ class EvaluationApi(object):
         """post_evaluation  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.post_evaluation_with_http_info(body, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.post_evaluation_with_http_info(body, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param EvalContext body: evalution context (required)
         :return: EvalResult
                  If the method is called asynchronously,
@@ -70,7 +70,7 @@ class EvaluationApi(object):
         """
 
         all_params = ['body']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -124,7 +124,7 @@ class EvaluationApi(object):
             files=local_var_files,
             response_type='EvalResult',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -134,18 +134,18 @@ class EvaluationApi(object):
         """post_evaluation_batch  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.post_evaluation_batch(body, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.post_evaluation_batch(body, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param EvaluationBatchRequest body: evalution batch request (required)
         :return: EvaluationBatchResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.post_evaluation_batch_with_http_info(body, **kwargs)  # noqa: E501
         else:
             (data) = self.post_evaluation_batch_with_http_info(body, **kwargs)  # noqa: E501
@@ -155,11 +155,11 @@ class EvaluationApi(object):
         """post_evaluation_batch  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.post_evaluation_batch_with_http_info(body, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.post_evaluation_batch_with_http_info(body, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param EvaluationBatchRequest body: evalution batch request (required)
         :return: EvaluationBatchResponse
                  If the method is called asynchronously,
@@ -167,7 +167,7 @@ class EvaluationApi(object):
         """
 
         all_params = ['body']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -221,7 +221,7 @@ class EvaluationApi(object):
             files=local_var_files,
             response_type='EvaluationBatchResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

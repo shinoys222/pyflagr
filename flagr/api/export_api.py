@@ -38,17 +38,17 @@ class ExportApi(object):
 
         Export sqlite3 format of the db dump, which is converted from the main database.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_export_sq_lite(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_export_sq_lite(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :return: file
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_export_sq_lite_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_export_sq_lite_with_http_info(**kwargs)  # noqa: E501
@@ -59,18 +59,18 @@ class ExportApi(object):
 
         Export sqlite3 format of the db dump, which is converted from the main database.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_export_sq_lite_with_http_info(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_export_sq_lite_with_http_info(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :return: file
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
         all_params = []  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -118,7 +118,7 @@ class ExportApi(object):
             files=local_var_files,
             response_type='file',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

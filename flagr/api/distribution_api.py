@@ -37,11 +37,11 @@ class DistributionApi(object):
         """find_distributions  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.find_distributions(flag_id, segment_id, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.find_distributions(flag_id, segment_id, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param int flag_id: numeric ID of the flag (required)
         :param int segment_id: numeric ID of the segment (required)
         :return: list[Distribution]
@@ -49,7 +49,7 @@ class DistributionApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.find_distributions_with_http_info(flag_id, segment_id, **kwargs)  # noqa: E501
         else:
             (data) = self.find_distributions_with_http_info(flag_id, segment_id, **kwargs)  # noqa: E501
@@ -59,11 +59,11 @@ class DistributionApi(object):
         """find_distributions  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.find_distributions_with_http_info(flag_id, segment_id, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.find_distributions_with_http_info(flag_id, segment_id, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param int flag_id: numeric ID of the flag (required)
         :param int segment_id: numeric ID of the segment (required)
         :return: list[Distribution]
@@ -72,7 +72,7 @@ class DistributionApi(object):
         """
 
         all_params = ['flag_id', 'segment_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -136,7 +136,7 @@ class DistributionApi(object):
             files=local_var_files,
             response_type='list[Distribution]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -147,11 +147,11 @@ class DistributionApi(object):
 
         replace the distribution with the new setting  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.put_distributions(flag_id, segment_id, body, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.put_distributions(flag_id, segment_id, body, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param int flag_id: numeric ID of the flag (required)
         :param int segment_id: numeric ID of the segment (required)
         :param PutDistributionsRequest body: array of distributions (required)
@@ -160,7 +160,7 @@ class DistributionApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.put_distributions_with_http_info(flag_id, segment_id, body, **kwargs)  # noqa: E501
         else:
             (data) = self.put_distributions_with_http_info(flag_id, segment_id, body, **kwargs)  # noqa: E501
@@ -171,11 +171,11 @@ class DistributionApi(object):
 
         replace the distribution with the new setting  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.put_distributions_with_http_info(flag_id, segment_id, body, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.put_distributions_with_http_info(flag_id, segment_id, body, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param int flag_id: numeric ID of the flag (required)
         :param int segment_id: numeric ID of the segment (required)
         :param PutDistributionsRequest body: array of distributions (required)
@@ -185,7 +185,7 @@ class DistributionApi(object):
         """
 
         all_params = ['flag_id', 'segment_id', 'body']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -255,7 +255,7 @@ class DistributionApi(object):
             files=local_var_files,
             response_type='list[Distribution]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

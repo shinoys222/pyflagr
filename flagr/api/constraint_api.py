@@ -37,11 +37,11 @@ class ConstraintApi(object):
         """create_constraint  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_constraint(flag_id, segment_id, body, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.create_constraint(flag_id, segment_id, body, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param int flag_id: numeric ID of the flag (required)
         :param int segment_id: numeric ID of the segment (required)
         :param CreateConstraintRequest body: create a constraint (required)
@@ -50,7 +50,7 @@ class ConstraintApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.create_constraint_with_http_info(flag_id, segment_id, body, **kwargs)  # noqa: E501
         else:
             (data) = self.create_constraint_with_http_info(flag_id, segment_id, body, **kwargs)  # noqa: E501
@@ -60,11 +60,11 @@ class ConstraintApi(object):
         """create_constraint  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_constraint_with_http_info(flag_id, segment_id, body, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.create_constraint_with_http_info(flag_id, segment_id, body, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param int flag_id: numeric ID of the flag (required)
         :param int segment_id: numeric ID of the segment (required)
         :param CreateConstraintRequest body: create a constraint (required)
@@ -74,7 +74,7 @@ class ConstraintApi(object):
         """
 
         all_params = ['flag_id', 'segment_id', 'body']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -144,7 +144,7 @@ class ConstraintApi(object):
             files=local_var_files,
             response_type='Constraint',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -154,11 +154,11 @@ class ConstraintApi(object):
         """delete_constraint  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_constraint(flag_id, segment_id, constraint_id, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.delete_constraint(flag_id, segment_id, constraint_id, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param int flag_id: numeric ID of the flag (required)
         :param int segment_id: numeric ID of the segment (required)
         :param int constraint_id: numeric ID of the constraint (required)
@@ -167,7 +167,7 @@ class ConstraintApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.delete_constraint_with_http_info(flag_id, segment_id, constraint_id, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_constraint_with_http_info(flag_id, segment_id, constraint_id, **kwargs)  # noqa: E501
@@ -177,11 +177,11 @@ class ConstraintApi(object):
         """delete_constraint  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_constraint_with_http_info(flag_id, segment_id, constraint_id, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.delete_constraint_with_http_info(flag_id, segment_id, constraint_id, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param int flag_id: numeric ID of the flag (required)
         :param int segment_id: numeric ID of the segment (required)
         :param int constraint_id: numeric ID of the constraint (required)
@@ -191,7 +191,7 @@ class ConstraintApi(object):
         """
 
         all_params = ['flag_id', 'segment_id', 'constraint_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -263,7 +263,7 @@ class ConstraintApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -273,11 +273,11 @@ class ConstraintApi(object):
         """find_constraints  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.find_constraints(flag_id, segment_id, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.find_constraints(flag_id, segment_id, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param int flag_id: numeric ID of the flag (required)
         :param int segment_id: numeric ID of the segment (required)
         :return: list[Constraint]
@@ -285,7 +285,7 @@ class ConstraintApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.find_constraints_with_http_info(flag_id, segment_id, **kwargs)  # noqa: E501
         else:
             (data) = self.find_constraints_with_http_info(flag_id, segment_id, **kwargs)  # noqa: E501
@@ -295,11 +295,11 @@ class ConstraintApi(object):
         """find_constraints  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.find_constraints_with_http_info(flag_id, segment_id, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.find_constraints_with_http_info(flag_id, segment_id, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param int flag_id: numeric ID of the flag (required)
         :param int segment_id: numeric ID of the segment (required)
         :return: list[Constraint]
@@ -308,7 +308,7 @@ class ConstraintApi(object):
         """
 
         all_params = ['flag_id', 'segment_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -372,7 +372,7 @@ class ConstraintApi(object):
             files=local_var_files,
             response_type='list[Constraint]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -382,11 +382,11 @@ class ConstraintApi(object):
         """put_constraint  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.put_constraint(flag_id, segment_id, constraint_id, body, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.put_constraint(flag_id, segment_id, constraint_id, body, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param int flag_id: numeric ID of the flag (required)
         :param int segment_id: numeric ID of the segment (required)
         :param int constraint_id: numeric ID of the constraint (required)
@@ -396,7 +396,7 @@ class ConstraintApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.put_constraint_with_http_info(flag_id, segment_id, constraint_id, body, **kwargs)  # noqa: E501
         else:
             (data) = self.put_constraint_with_http_info(flag_id, segment_id, constraint_id, body, **kwargs)  # noqa: E501
@@ -406,11 +406,11 @@ class ConstraintApi(object):
         """put_constraint  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.put_constraint_with_http_info(flag_id, segment_id, constraint_id, body, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.put_constraint_with_http_info(flag_id, segment_id, constraint_id, body, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param int flag_id: numeric ID of the flag (required)
         :param int segment_id: numeric ID of the segment (required)
         :param int constraint_id: numeric ID of the constraint (required)
@@ -421,7 +421,7 @@ class ConstraintApi(object):
         """
 
         all_params = ['flag_id', 'segment_id', 'constraint_id', 'body']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -499,7 +499,7 @@ class ConstraintApi(object):
             files=local_var_files,
             response_type='Constraint',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
